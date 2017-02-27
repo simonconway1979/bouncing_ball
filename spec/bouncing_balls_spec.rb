@@ -10,8 +10,9 @@ describe BouncingBalls do
       expect(subject.height).to be >= 0
     end
 
-    it 'should have a variable called bounce which is between 0 and 1' do
-      expect(subject.bounce).to be_within(0.5).of (0.5)
+    it 'should have a variable called bounce which is greater than 0 and less than 1' do
+      expect(subject.bounce).to be >= 0
+      expect(subject.bounce).to be < 1
     end
 
     it 'should have a variable called window which is greater than 0 and less than height' do

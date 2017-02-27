@@ -15,8 +15,7 @@ class BouncingBalls
     return -1 if (@bounce.is_a? Numeric) == false
     return -1 if (@window.is_a? Numeric) == false
     return -1 if @height < 0
-    return -1 if @bounce >= @height
-    return -1 if @bounce > 1
+    return -1 if @bounce >= 1
     return -1 if @bounce < 0
     return -1 if @window < 0
     return -1 if @window >= @height
@@ -31,15 +30,17 @@ class BouncingBalls
   end
 
   def count_passes
-    while bounce_visible? == true
-      @height = bounce_height
-      @counter += 2
-      puts @height
-    end
+    if check_variables == -1
+      throw "Invalid variables"
+    else
+      while bounce_visible? == true
+        @height = bounce_height
+        @counter += 2
+      end
+      @counter
+  end
   end
 end
 
-ball = BouncingBalls.new(10, 0.8, 2)
-
-
-#require "pry"; binding.pry
+ball = BouncingBalls.new(3, 0.98, 1.5)
+ball.count_passes
