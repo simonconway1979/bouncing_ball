@@ -1,5 +1,5 @@
 
-##Bouncing Balls Kata
+##Bouncing Balls
 
 A child plays with a ball on the nth floor of a big building. The height of this floor is known:
 
