@@ -23,7 +23,7 @@ class BouncingBalls
   end
 
   def bounce_visible?
-    bounce_height > window
+    bounce_height >= window
   end
 
   def bounce_height
@@ -42,4 +42,4 @@ end
 ball = BouncingBalls.new(10, 0.8, 2)
 
 
-require "pry"; binding.pry
+#require "pry"; binding.pry
